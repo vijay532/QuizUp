@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="text-center mb-3">Hello, This is Django Quiz Session</h1>
+    {% if latest_question %}
+        {% for items in latest_question %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <p class="lead">{{items.question_text}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>Cancellation of quiz question</p>
+    {% endif %}
+    
+{% endblock %}
