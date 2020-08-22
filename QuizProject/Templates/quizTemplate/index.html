@@ -6,6 +6,8 @@
         <div class="card mb-3">
             <div class="card-body">
                 <p class="lead">{{items.question_text}}</p>
+                <a href ="{% url 'QuizApp:detail' question.id %}" class ="btn btn-primary btn-sm">Ans Now</a> 
+                <a href ="{% url 'QuizApp:results' question.id %}" class ="btn btn-secondary btn-sm">Results</a>
             </div>
         </div>
         {% endfor %}
